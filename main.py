@@ -1,10 +1,5 @@
 from telethon import TelegramClient, events
 import asyncio
-import telebot_bot
-import keep_alive
-from keep_alive import keep_alive
-
-keep_alive()
 
 # Replace these with your values from https://my.telegram.org/apps
 API_ID = '25140031'
@@ -12,14 +7,14 @@ API_HASH = 'a9308e99598c9eee9889a1badf2ddd2f'
 PHONE_NUMBER = '+971569803058'
 
 # Channel usernames (with or without @)
-SOURCE_CHANNEL = '@cointelegraph'
-TARGET_CHANNEL = '@crypto_N4'
+SOURCE_CHANNEL = '@mahmood2794'
+TARGET_CHANNEL = '@mhmd2704'
 
 # Initialize the client
 client = TelegramClient('session_name', API_ID, API_HASH)
 
 # Specify the word to remove from messages
-WORD_TO_REMOVE = "@Cointelegraph"  # Change this to the word you want to filter out
+WORD_TO_REMOVE = "word_to_remove"  # Change this to the word you want to filter out
 
 async def send_code():
     try:
@@ -55,4 +50,3 @@ async def main():
 
 # Run the bot
 client.loop.run_until_complete(main())
-
